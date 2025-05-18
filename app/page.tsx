@@ -142,7 +142,7 @@ export default function Home() {
                 Bhopal Tourism is a digital guide designed to showcase the rich heritage, iconic landmarks, and natural beauty of Bhopal, the "City of Lakes." It highlights major attractions like Upper and Lower Lakes, Sanchi Stupa, Taj-ul-Masajid, and Van Vihar, along with local culture, cuisine, and festivals. The project aims to promote tourism through an engaging and informative platform.
               </p>
               <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
-                <Link href="https://github.com/MdAashikRain007/Tourism">View Project</Link>
+                <Link href="https://bhopal-tourism.onrender.com/">View Project</Link>
               </Button>
             </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
                 Wanderlust is a travel stay booking platform inspired by Airbnb, built using the MVC architecture. It includes key features like secure login/signup, listing management, booking system, reviews and ratings, and strong security measures (password hashing, input validation, etc.). Designed for both hosts and travelers, it offers a smooth, responsive, and user-friendly experience across all devices.
               </p>
               <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
-                <Link href="https://github.com/MdAashikRain007/Wanderlust">View Project</Link>
+                <Link href="https://wanderlust-d0ky.onrender.com/listings">View Project</Link>
               </Button>
             </div>
             <div className="project-card bg-white/10 rounded-xl p-6 backdrop-blur-lg">
