@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Moon, Sun } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -19,6 +20,15 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menu on route change (optional, for better UX)
+  useEffect(() => {
+    if (menuOpen) {
+      const close = () => setMenuOpen(false);
+      window.addEventListener('resize', close);
+      return () => window.removeEventListener('resize', close);
+    }
+  }, [menuOpen]);
 
   return (
     <motion.nav
@@ -40,36 +50,55 @@ export default function Navbar() {
             </Link>
           </motion.div>
           
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/achievements">Achievements</NavLink>
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
+          </div>
+          {/* Hamburger Icon */}
+          <div className="md:hidden flex items-center">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white"
+              aria-label="Open menu"
             >
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="relative text-white"
-              >
-                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              </Button>
-            </motion.div>
+              {menuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+            </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="md:hidden fixed top-20 left-0 w-full bg-black/90 backdrop-blur-lg z-40"
+          >
+            <div className="flex flex-col items-center py-6 space-y-6">
+              <NavLink href="/" onClick={() => setMenuOpen(false)}>Home</NavLink>
+              <NavLink href="/about" onClick={() => setMenuOpen(false)}>About</NavLink>
+              <NavLink href="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+              <NavLink href="/achievements" onClick={() => setMenuOpen(false)}>Achievements</NavLink>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
 
-function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
   return (
     <Link 
       href={href}
+      onClick={onClick}
       className="text-white hover:text-blue-400 transition-colors relative group text-lg"
     >
       {children}

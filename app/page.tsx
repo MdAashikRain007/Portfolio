@@ -76,7 +76,7 @@ export default function Home() {
     <main ref={mainRef} className="min-h-screen">
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 z-0"
           style={{
             backgroundImage: "url('https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80')",
@@ -85,14 +85,14 @@ export default function Home() {
             filter: 'brightness(0.3)'
           }}
         />
-        
+
         <div className="container relative z-10 mx-auto px-4 text-center text-white">
           <h1 className="text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
             Md Aashik Rain
           </h1>
           <p className="text-2xl mb-8 text-gray-300">MERN Stack Developer</p>
           <div className="flex gap-4 justify-center">
-            <Button 
+            <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white"
               asChild
@@ -102,10 +102,10 @@ export default function Home() {
                 Download CV
               </a>
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10"
+              className="bg-black text-white border border-white hover:bg-white hover:text-black transition-colors"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             >
               About Me
@@ -127,34 +127,81 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Project cards with class for GSAP animation */}
             <div className="project-card bg-white/10 rounded-xl p-6 backdrop-blur-lg">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+              <div className="relative h-48 md:h-64 mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Weather Website"
+                  src="/tourism.png"
+                  alt="bhpaol-tourism"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-white">Weather Website</h3>
-              <p className="text-gray-300 mb-6">A responsive weather application with real-time updates and beautiful UI.</p>
-              <Button className="w-full" asChild>
-                <Link href="https://github.com">View Project</Link>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Bhopal Tourism</h3>
+              <p className="text-gray-300 mb-6">
+                Bhopal Tourism is a digital guide designed to showcase the rich heritage, iconic landmarks, and natural beauty of Bhopal, the "City of Lakes." It highlights major attractions like Upper and Lower Lakes, Sanchi Stupa, Taj-ul-Masajid, and Van Vihar, along with local culture, cuisine, and festivals. The project aims to promote tourism through an engaging and informative platform.
+              </p>
+              <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
+                <Link href="https://github.com/MdAashikRain007/Tourism">View Project</Link>
               </Button>
             </div>
 
             <div className="project-card bg-white/10 rounded-xl p-6 backdrop-blur-lg">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+              <div className="relative h-48 md:h-64 mb-6 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Netflix Clone"
+                  src="/wanderlust.png"
+                  alt="wanderlust"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
                 />
               </div>
-              <h3 className="text-2xl font-semibold mb-4 text-white">Netflix Clone</h3>
-              <p className="text-gray-300 mb-6">A full-featured streaming platform clone with modern UI/UX.</p>
-              <Button className="w-full" asChild>
-                <Link href="https://github.com">View Project</Link>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Wanderlust</h3>
+              <p className="text-gray-300 mb-6">
+                Wanderlust is a travel stay booking platform inspired by Airbnb, built using the MVC architecture. It includes key features like secure login/signup, listing management, booking system, reviews and ratings, and strong security measures (password hashing, input validation, etc.). Designed for both hosts and travelers, it offers a smooth, responsive, and user-friendly experience across all devices.
+              </p>
+              <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
+                <Link href="https://github.com/MdAashikRain007/Wanderlust">View Project</Link>
+              </Button>
+            </div>
+            <div className="project-card bg-white/10 rounded-xl p-6 backdrop-blur-lg">
+              <div className="relative h-48 md:h-64 mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/youtube.jpg"
+                  alt="youtube Clone"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Youtube Clone</h3>
+              <p className="text-gray-300 mb-6">
+                This YouTube Clone is a video streaming platform with a clean, responsive UI/UX that mimics the core functionality of YouTube. It includes features like video playback, user-friendly navigation, and a smart video suggestion system based on user interest. Designed with a focus on smooth interaction and visual clarity, the project delivers an engaging viewing experience.
+              </p>
+              <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
+                <Link href="https://github.com/MdAashikRain007/Youtube-Clone">View Project</Link>
+              </Button>
+            </div>
+
+            <div className="project-card bg-white/10 rounded-xl p-6 backdrop-blur-lg">
+              <div className="relative h-48 md:h-64 mb-6 rounded-lg overflow-hidden">
+                <Image
+                  src="/weather.jpg"
+                  alt="Weather app"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-white">Weather App</h3>
+              <p className="text-gray-300 mb-6">
+                The Weather App is a responsive and user-friendly application that provides real-time weather updates using a weather API. It features a clean and modern UI/UX with a dynamic search function, allowing users to get accurate weather information for any city worldwide. Key data includes temperature, humidity, wind speed, and weather conditions, all presented in an intuitive and visually appealing interface.
+              </p>
+              <Button className="w-full bg-white text-black border border-white hover:bg-black hover:text-white transition-colors" asChild>
+                <Link href="https://github.com/MdAashikRain007/weather-app">View Project</Link>
               </Button>
             </div>
           </div>
@@ -169,12 +216,12 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-0">
               <div className="relative h-[250px] p-5">
                 <Image
-                 src="/image.jpg"
+                  src="/image.jpg"
                   alt="NPTEL Certificate"
                   width={500} // Adjust as needed
                   height={250}
-                  
-                
+
+
                   className="object-cover rounded"
                 />
               </div>
@@ -205,7 +252,7 @@ export default function Home() {
               I am a passionate Full Stack Developer with a strong foundation in modern web technologies.
               My journey in software development has been driven by a desire to create impactful digital solutions.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-white">Skills</h3>
@@ -213,13 +260,19 @@ export default function Home() {
                   <li>• HTML</li>
                   <li>• CSS</li>
                   <li>• Bootstrp</li>
+                  <li>• Tailwind CSS</li>
                   <li>• JavaScript</li>
                   <li>• React.js</li>
+                  <li>• Node.js</li>
+                  <li>• Express.js</li>
+                  <li>• SQL</li>
+                  <li>• MongoDB</li>
+                  <li>• Python</li>
                   <li>• Java</li>
                   <li>• Data Structures and Algorithms </li>
                 </ul>
               </div>
-              
+
               <div className="bg-white/10 rounded-xl p-6 backdrop-blur-lg">
                 <h3 className="text-2xl font-semibold mb-4 text-white">Education</h3>
                 <ul className="space-y-2 text-gray-300">
@@ -240,7 +293,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <div className="flex space-x-6 mb-8">
               <motion.a
-                href="https://github.com"
+                href="https://github.com/MdAashikRain007"
                 whileHover={{ scale: 1.2, rotate: 5 }}
                 className="text-gray-400 hover:text-white transition-colors"
               >

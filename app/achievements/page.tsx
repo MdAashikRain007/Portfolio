@@ -67,8 +67,7 @@ export default function Achievements() {
                   demonstrating proficiency in advanced Java concepts and best practices.
                 </p>
                 <ul className="text-gray-300 space-y-2 mb-6">
-                  <li>• Score: 95%</li>
-                  <li>• Top 5% of participants</li>
+                  <li>• Score: 58%</li>
                   <li>• Advanced concepts mastery</li>
                   <li>• Practical project completion</li>
                 </ul>

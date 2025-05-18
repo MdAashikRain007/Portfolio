@@ -85,14 +85,12 @@ export default function About() {
           <div className="about-content bg-white/10 rounded-xl p-6 backdrop-blur-lg">
             <h3 className="text-2xl font-bold text-white mb-4">Frontend</h3>
             <ul className="text-gray-300 space-y-2">
-              <li>• HTML</li>
-              <li>• CSS</li>
-              <li>• Bootstrap</li>
-              <li>• JavaScript</li> 
-              <li>• React.js</li>
-              <li>• Java</li>
-              <li>• Data Structures and Algorithms </li>
-              {/* <li>• SQL</li> */}
+             <li>• HTML</li>
+                  <li>• CSS</li>
+                  <li>• Bootstrp</li>
+                  <li>• Tailwind CSS</li>
+                  <li>• JavaScript</li>
+                  <li>• React.js</li>     
             </ul>
           </div>
 
@@ -101,8 +99,8 @@ export default function About() {
             <ul className="text-gray-300 space-y-2">
               <li>• Node.js</li>
               <li>• Express.js</li>
+               <li>• SQL</li>
               <li>• MongoDB</li>
-              <li>• SQL</li>
             </ul>
           </div>
 
