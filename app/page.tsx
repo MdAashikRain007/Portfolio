@@ -97,7 +97,7 @@ export default function Home() {
               className="bg-blue-600 hover:bg-blue-700 text-white"
               asChild
             >
-              <a href="/Md-Aashik-CV.pdf" download>
+              <a href="/Md-Aashik-Rain-CV.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>
