@@ -40,8 +40,8 @@ export default function About() {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-gradient-to-b from-gray-900 to-black pt-24">
-      <div className="container mx-auto px-4">
+    <div ref={containerRef} className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
+      <div className="container mx-auto px-0">
         <div className="about-header text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Me</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -82,38 +82,73 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {/* Frontend */}
           <div className="about-content bg-white/10 rounded-xl p-6 backdrop-blur-lg">
             <h3 className="text-2xl font-bold text-white mb-4">Frontend</h3>
-            <ul className="text-gray-300 space-y-2">
-             <li>• HTML</li>
-                  <li>• CSS</li>
-                  <li>• Bootstrp</li>
-                  <li>• Tailwind CSS</li>
-                  <li>• JavaScript</li>
-                  <li>• React.js</li>     
-            </ul>
+            <div className="flex flex-wrap gap-4">
+              {/* HTML */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/html5/fff/ff5722" alt="HTML" className="w-8 h-8" />
+              </div>
+              {/* CSS */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/css3/fff/2965f1" alt="CSS" className="w-8 h-8" />
+              </div>
+              {/* Bootstrap */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/bootstrap/fff/7952b3" alt="Bootstrap" className="w-8 h-8" />
+              </div>
+              {/* Tailwind CSS */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/tailwindcss/fff/06b6d4" alt="Tailwind CSS" className="w-8 h-8" />
+              </div>
+              {/* JavaScript */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/javascript/fff/f7df1e" alt="JavaScript" className="w-8 h-8" />
+              </div>
+              {/* React */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/react/fff/61dafb" alt="React.js" className="w-8 h-8" />
+              </div>
+            </div>
           </div>
 
+          {/* Backend */}
           <div className="about-content bg-white/10 rounded-xl p-6 backdrop-blur-lg">
             <h3 className="text-2xl font-bold text-white mb-4">Backend</h3>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Node.js</li>
-              <li>• Express.js</li>
-               <li>• SQL</li>
-              <li>• MongoDB</li>
-            </ul>
+            <div className="flex flex-wrap gap-4">
+              {/* Node.js */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/nodedotjs/fff/339933" alt="Node.js" className="w-8 h-8" />
+              </div>
+              {/* Express.js */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/express/fff/000000" alt="Express.js" className="w-8 h-8" />
+              </div>
+              {/* SQL */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/mysql/fff/4479a1" alt="SQL" className="w-8 h-8" />
+              </div>
+              {/* MongoDB */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/mongodb/fff/47a248" alt="MongoDB" className="w-8 h-8" />
+              </div>
+            </div>
           </div>
 
+          {/* Tools */}
           <div className="about-content bg-white/10 rounded-xl p-6 backdrop-blur-lg">
             <h3 className="text-2xl font-bold text-white mb-4">Tools</h3>
-            <ul className="text-gray-300 space-y-2">
-              <li>• Git</li>
-              <li>• Git-Hub</li>
-              {/* <li>• Docker</li> */}
-              {/* <li>• AWS</li>
-              <li>• CI/CD</li>
-              <li>• Agile/Scrum</li> */}
-            </ul>
+            <div className="flex flex-wrap gap-4">
+              {/* Git */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/git/fff/f05032" alt="Git" className="w-8 h-8" />
+              </div>
+              {/* GitHub */}
+              <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+                <img src="https://cdn.simpleicons.org/github/fff/181717" alt="GitHub" className="w-8 h-8" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
